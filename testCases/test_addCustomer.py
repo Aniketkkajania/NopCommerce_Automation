@@ -67,6 +67,7 @@ class Test_003_AddCustomer:
             self.addcust.setAdminComment("Going Great!!")
             self.logger.info("***************** Saving Customer Info *******************")
             self.addcust.clickOnSave()
+            self.wait.until(EC.visibility_of_element_located((By.XPATH, '//div[contains(@class, "alert alert-success alert-dismissable")]')))
             cur_title = self.driver.find_element(By.XPATH, '//div[contains(@class, "alert alert-success alert-dismissable")]').text
             if cur_title == "×\nThe new customer has been added successfully.":
                 self.logger.info("***************** Customer Added Successfully *******************")   
