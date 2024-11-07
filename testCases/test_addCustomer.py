@@ -55,7 +55,7 @@ class Test_003_AddCustomer:
             self.addcust.setDateOfBirth("20-03-2002")
             self.addcust.setCompanyName("BusyQA")
             self.addcust.setIsTaxExempt("Yes")
-            time.sleep(1)
+            time.sleep(2)
             self.addcust.setNewsletter("Test store 2")
             time.sleep(1)
             self.addcust.setCustomerRoles("Guest")
