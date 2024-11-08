@@ -53,7 +53,7 @@ class Test_003_AddCustomer:
             self.addcust.setFirstName("Aniket")
             self.addcust.setLastName("Kumar")
             self.addcust.setGender("Male")
-            self.addcust.setDateOfBirth("20/03/2002")
+            self.addcust.setDateOfBirth("20-03-2002")
             self.addcust.setCompanyName("BusyQA")
             self.addcust.setIsTaxExempt("Yes")
             time.sleep(2)
