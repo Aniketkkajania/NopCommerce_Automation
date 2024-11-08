@@ -8,6 +8,7 @@ from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGen
 from pageObjects.LoginPage import LoginPage
 from pageObjects.AddCustomers import AddCustomers
+from selenium.webdriver.common.keys import Keys
 import pytest 
 
 class Test_003_AddCustomer:
