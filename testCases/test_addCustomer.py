@@ -53,7 +53,7 @@ class Test_003_AddCustomer:
             self.addcust.setFirstName("Aniket")
             self.addcust.setLastName("Kumar")
             self.addcust.setGender("Male")
-            self.addcust.setDateOfBirth("20-03-2002")
+            self.addcust.setDateOfBirth("20/03/2002")
             self.addcust.setCompanyName("BusyQA")
             self.addcust.setIsTaxExempt("Yes")
             time.sleep(2)
@@ -68,10 +68,8 @@ class Test_003_AddCustomer:
             self.addcust.setAdminComment("Going Great!!")
             self.logger.info("***************** Saving Customer Info *******************")
             time.sleep(2)
-            self.driver.find_element(By.XPATH, "//button[@type='submit' and @name='save' and contains(@class, 'btn-primary')]").click()
-            time.sleep(3)
+            self.addcust.clickOnSave()
             cur_title = self.driver.title
-            print(cur_title)
             if cur_title == "Customers / nopCommerce administration":
                 self.logger.info("***************** Customer Added Successfully *******************")   
                 self.driver.quit()
