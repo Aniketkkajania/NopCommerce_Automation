@@ -68,7 +68,8 @@ class Test_003_AddCustomer:
             self.addcust.setAdminComment("Going Great!!")
             self.logger.info("***************** Saving Customer Info *******************")
             time.sleep(2)
-            self.driver.find_element(By.TAG_NAME, 'body').send_keys(Keys.RETURN)
+            self.driver.find_element(By.XPATH, "//button[@type='submit' and @name='save' and contains(@class, 'btn-primary')]").click()
+            time.sleep(3)
             cur_title = self.driver.title
             print(cur_title)
             if cur_title == "Customers / nopCommerce administration":
