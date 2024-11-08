@@ -68,8 +68,8 @@ class Test_003_AddCustomer:
             self.logger.info("***************** Saving Customer Info *******************")
             time.sleep(2)
             self.addcust.clickOnSave()
-            self.addcust.clickOnSave()
             cur_title = self.driver.title
+            print(cur_title)
             if cur_title == "Customers / nopCommerce administration":
                 self.logger.info("***************** Customer Added Successfully *******************")   
                 self.driver.quit()
