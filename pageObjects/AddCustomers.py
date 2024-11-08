@@ -78,6 +78,7 @@ class AddCustomers:
             self.driver.find_element(By.ID, self.input_gender_male_id).click()
 
     def setDateOfBirth(self, dob):
+        self.driver.find_element(By.ID, self.textbox_dob_id).clear()
         self.driver.find_element(By.ID, self.textbox_dob_id).send_keys(dob)
 
     def setCompanyName(self, company):
