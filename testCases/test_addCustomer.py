@@ -69,7 +69,7 @@ class Test_003_AddCustomer:
             self.addcust.clickOnSave()
             time.sleep(5)
             cur_title = self.driver.title
-            if cur_title == "×\nCustomers / nopCommerce administration":
+            if cur_title == "Customers / nopCommerce administration":
                 self.logger.info("***************** Customer Added Successfully *******************")   
                 self.driver.quit()
                 assert True
